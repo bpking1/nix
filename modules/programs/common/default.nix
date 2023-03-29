@@ -9,8 +9,8 @@
   ./resource_monitor
   ./search
   ./yt-dlp
-  ./zathura
+  ./zathura  # a document viewer, https://github.com/pwmt/zathura
   ./kitty
-  ./youtube-tui
-  ./aliyun-cli
+  ./youtube-tui # terminal youtube, write in rust
+  # ./aliyun-cli
 ]
