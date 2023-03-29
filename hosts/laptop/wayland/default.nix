@@ -52,6 +52,7 @@
 
   i18n.inputMethod = {
     enabled = "fcitx5";
+    # rime 输入法，wiki，moe词库
     fcitx5.addons = with pkgs; [ fcitx5-rime fcitx5-chinese-addons fcitx5-table-extra fcitx5-pinyin-moegirl fcitx5-pinyin-zhwiki ];
   };
 
@@ -105,7 +106,7 @@
       cinnamon.nemo
       networkmanagerapplet
       wev
-      wf-recorder    #luxiang de
+      wf-recorder # screen record
       alsa-lib
       alsa-utils
       flac
@@ -115,9 +116,9 @@
       pkgs.rust-bin.stable.latest.default
       lxappearance
       imagemagick
-      pkgs.sway-contrib.grimshot
-      flameshot
-      grim
+      pkgs.sway-contrib.grimshot # 截图
+      flameshot # 截图 for xorg
+      grim  # 截图 grimblast --cursor copy area
     ];
   };
 
