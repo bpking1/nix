@@ -7,7 +7,6 @@
     [
       ../hardware-configuration.nix
       ../../../modules/fonts
-      ../../../modules/gui.nix
     ] ++ [
       # ../../../modules/desktop/sway
       ../../../modules/desktop/hyprland
