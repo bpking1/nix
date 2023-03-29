@@ -29,8 +29,7 @@
     binsh = "${pkgs.dash}/bin/dash";
     shells = with pkgs; [ fish ];
     systemPackages = with pkgs; [
-      vscode
-      microsoft-edge
+      
       git
       neovim
       wget
@@ -43,7 +42,7 @@
       p7zip
       atool
       unzip
-      #ranger
+      ranger # terminal file manager
       ffmpeg
       ffmpegthumbnailer
       glib
@@ -60,7 +59,7 @@
     ];
   };
   services.dbus.enable = true;
-  services.flatpak.enable = true;
+  # services.flatpak.enable = true;
 
   nix = {
     settings = {
