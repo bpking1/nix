@@ -153,19 +153,19 @@ in
     # hunspell
     # filelight
     # keepassxc
-    (google-chrome.override {
-      commandLineArgs = "--enable-features=WebUIDarkMode --force-dark-mode";
-    })
+    # (google-chrome.override {
+    #   commandLineArgs = "--enable-features=WebUIDarkMode --force-dark-mode";
+    # })
     # goldendict
     ];
   };
 
-  programs.vscode =
-    let
-      package = pkgs.vscode.fhs;
-    in
-    {
-      inherit package;
-      enable = true;
-    };
+  # programs.vscode =
+  #   let
+  #     package = pkgs.vscode.fhs;
+  #   in
+  #   {
+  #     inherit package;
+  #     enable = true;
+  #   };
 }

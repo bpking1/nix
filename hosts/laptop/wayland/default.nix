@@ -20,6 +20,14 @@
     # shell = pkgs.fish;
     isNormalUser = true;
     extraGroups = [ "wheel" "docker" "libvirtd" "video" "audio" ];
+    programs.vscode =
+    let
+      package = pkgs.vscode.fhs;
+    in
+    {
+      inherit package;
+      enable = true;
+    };
     packages = (with pkgs; [
       # qq # qq official client
       # aichat  # chat gpt
