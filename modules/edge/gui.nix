@@ -23,6 +23,7 @@ let
     in
     {
       src = fetchurl {
+        # https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-dev/microsoft-edge-dev_113.0.1754.0-1_amd64.deb
         url = "https://packages.microsoft.com/repos/edge/pool/main/m/${baseName}-${channel}/${baseName}-${channel}_${version}-${revision}_amd64.deb";
         inherit sha256;
       };
@@ -140,11 +141,11 @@ in
   home = {
     packages = with pkgs; [
     # zotero
-    # (microsoft-edge.overrideAttrs (oldAttrs: msedge-override {
-    #   channel = "stable";
-    #   version = "110.0.1587.63";
-    #   sha256 = "sha256-gMTKBmCA1nD48y4igdKoeuebfndfS9U13s/EHv7SdFk=";
-    # }))
+    (microsoft-edge.overrideAttrs (oldAttrs: msedge-override {
+      channel = "stable";
+      version = "110.0.1587.63";
+      sha256 = "sha256-gMTKBmCA1nD48y4igdKoeuebfndfS9U13s/EHv7SdFk=";
+    }))
     # cascadia-code
     # slack
     rustdesk
