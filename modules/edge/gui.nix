@@ -141,11 +141,11 @@ in
   home = {
     packages = with pkgs; [
     # zotero
-    (microsoft-edge.overrideAttrs (oldAttrs: msedge-override {
-      channel = "stable";
-      version = "110.0.1587.63";
-      sha256 = "sha256-gMTKBmCA1nD48y4igdKoeuebfndfS9U13s/EHv7SdFk=";
-    }))
+    # (microsoft-edge.overrideAttrs (oldAttrs: msedge-override {
+    #   channel = "stable";
+    #   version = "110.0.1587.63";
+    #   sha256 = "sha256-gMTKBmCA1nD48y4igdKoeuebfndfS9U13s/EHv7SdFk=";
+    # }))
     # cascadia-code
     # slack
     rustdesk
@@ -153,9 +153,9 @@ in
     # hunspell
     # filelight
     # keepassxc
-    # (google-chrome.override {
-    #   commandLineArgs = "--enable-features=WebUIDarkMode --force-dark-mode";
-    # })
+    (google-chrome.override {
+      commandLineArgs = "--enable-features=WebUIDarkMode --force-dark-mode";
+    })
     # goldendict
     ];
   };
