@@ -29,7 +29,7 @@
     binsh = "${pkgs.dash}/bin/dash";
     shells = with pkgs; [ fish ];
     systemPackages = with pkgs; [
-      
+      pkgs.vscode.fhs
       git
       neovim
       wget
