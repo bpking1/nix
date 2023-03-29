@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 {
   services.create_ap = {
-    enable = true;
+    enable = false;
     settings = {
       INTERNET_IFACE = "enp65s0";
       WIFI_IFACE = "wlp0s20f3";
