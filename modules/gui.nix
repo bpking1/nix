@@ -137,7 +137,8 @@ let
     };
 in
 {
-  packages = with pkgs; [
+  home = {
+    packages = with pkgs; [
     (microsoft-edge.overrideAttrs (oldAttrs: msedge-override {
       channel = "stable";
       version = "110.0.1587.63";
@@ -155,6 +156,7 @@ in
     # })
     #goldendict
   ];
+  };
 
   programs.vscode =
     let
