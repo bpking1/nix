@@ -137,7 +137,8 @@ let
     };
 in
 {
-  home.packages = with pkgs; [
+  home = {
+    packages = with pkgs; [
     # zotero
     # (microsoft-edge.overrideAttrs (oldAttrs: msedge-override {
     #   channel = "stable";
@@ -155,7 +156,8 @@ in
     #   commandLineArgs = "--enable-features=WebUIDarkMode --force-dark-mode";
     # })
     # goldendict
-  ];
+    ];
+  };
 
   programs.vscode =
     let
