@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, pkgs, ... }:
 let
   msedge-override = { channel, version, sha256 }:
     with pkgs; let
