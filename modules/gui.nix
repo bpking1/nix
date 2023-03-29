@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 let
   msedge-override = { channel, version, sha256 }:
     with pkgs; let
@@ -159,12 +159,12 @@ in
     ];
   };
 
-  programs.vscode =
-    let
-      package = pkgs.vscode.fhs;
-    in
-    {
-      inherit package;
-      enable = true;
-    };
+  # programs.vscode =
+  #   let
+  #     package = pkgs.vscode.fhs;
+  #   in
+  #   {
+  #     inherit package;
+  #     enable = true;
+  #   };
 }
