@@ -18,7 +18,6 @@ in
       # ./laptop/x11 #only bspwm
     ] ++ [
       ./system.nix
-      ./gui.nix
     ] ++ [
       inputs.impermanence.nixosModules.impermanence
       inputs.nur.nixosModules.nur
