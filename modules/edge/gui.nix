@@ -159,12 +159,12 @@ in
     ];
   };
 
-  programs.vscode =
-    let
-      package = pkgs.vscode.fhs;
-    in
-    {
-      inherit package;
-      enable = true;
-    };
+  # programs.vscode =
+  #   let
+  #     package = pkgs.vscode.fhs;
+  #   in
+  #   {
+  #     inherit package;
+  #     enable = true;
+  #   };
 }
