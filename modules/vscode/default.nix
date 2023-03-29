@@ -1,8 +1,7 @@
 { config, pkgs, ... }:
-let
-in
 {
-  programs.vscode =
+  programs = {
+    vscode =
     let
       package = pkgs.vscode.fhs;
     in
@@ -10,4 +9,6 @@ in
       inherit package;
       enable = true;
     };
+  };
 }
+
