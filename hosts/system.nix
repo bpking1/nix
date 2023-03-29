@@ -60,6 +60,7 @@
     ];
   };
   services.dbus.enable = true;
+  services.flatpak.enable = true;
 
   nix = {
     settings = {
