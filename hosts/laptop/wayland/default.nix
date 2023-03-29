@@ -21,7 +21,9 @@
     isNormalUser = true;
     extraGroups = [ "wheel" "docker" "libvirtd" "video" "audio" ];
     packages = (with pkgs; [
-      tdesktop
+      # qq # qq official client
+      # aichat  # chat gpt
+      tdesktop  # telegram
       dbeaver
     ]) ++ (with config.nur.repos;[
       linyinfeng.icalingua-plus-plus
@@ -76,7 +78,7 @@
           "Codelearning"
           ".npm-global"
           ".config"
-          ".thunderbird"
+          # ".thunderbird"
           ".go-musicfox"
           "Flakes"
           "Kvm"
