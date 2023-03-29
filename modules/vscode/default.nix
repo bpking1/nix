@@ -1,4 +1,6 @@
 { config, pkgs, ... }:
+let
+in
 {
   programs.vscode =
     let
