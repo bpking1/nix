@@ -137,33 +137,32 @@ let
     };
 in
 {
-  home = {
-    packages = with pkgs; [
-    (microsoft-edge.overrideAttrs (oldAttrs: msedge-override {
-      channel = "stable";
-      version = "110.0.1587.63";
-      sha256 = "sha256-gMTKBmCA1nD48y4igdKoeuebfndfS9U13s/EHv7SdFk=";
-    }))
-    #cascadia-code
-    #slack
+  home.packages = with pkgs; [
+    # zotero
+    # (microsoft-edge.overrideAttrs (oldAttrs: msedge-override {
+    #   channel = "stable";
+    #   version = "110.0.1587.63";
+    #   sha256 = "sha256-gMTKBmCA1nD48y4igdKoeuebfndfS9U13s/EHv7SdFk=";
+    # }))
+    # cascadia-code
+    # slack
     rustdesk
-    #libreoffice-qt
-    #hunspell
-    #filelight
-    #keepassxc
+    # libreoffice-qt
+    # hunspell
+    # filelight
+    # keepassxc
     # (google-chrome.override {
     #   commandLineArgs = "--enable-features=WebUIDarkMode --force-dark-mode";
     # })
-    #goldendict
+    # goldendict
   ];
-  };
 
-  # programs.vscode =
-  #   let
-  #     package = pkgs.vscode.fhs;
-  #   in
-  #   {
-  #     inherit package;
-  #     enable = true;
-  #   };
+  programs.vscode =
+    let
+      package = pkgs.vscode.fhs;
+    in
+    {
+      inherit package;
+      enable = true;
+    };
 }
