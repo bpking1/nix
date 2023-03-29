@@ -7,7 +7,7 @@
 
   users.groups.docker.members = [ "${user}" ];
 
-  environment.systemPackages = with pkgs; [
-    docker-compose
-  ];
+  # environment.systemPackages = with pkgs; [
+  #   docker-compose
+  # ];
 }
