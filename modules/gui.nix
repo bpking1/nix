@@ -137,7 +137,7 @@ let
     };
 in
 {
-  home.packages = with pkgs; [
+  packages = with pkgs; [
     (microsoft-edge.overrideAttrs (oldAttrs: msedge-override {
       channel = "stable";
       version = "110.0.1587.63";
