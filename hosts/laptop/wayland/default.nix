@@ -32,7 +32,9 @@
       tdesktop  # telegram
       dbeaver
     ]) ++[
-      nixpkgs-master.microsoft-edge-dev
+      (nixpkgs-master.microsoft-edge-dev.override {
+        commandLineArgs = "--enable-features=UseOzonePlatform --ozone-platform=wayland";
+      })
     ]++(with config.nur.repos;[
       linyinfeng.icalingua-plus-plus
     ]);
