@@ -26,7 +26,7 @@
       tdesktop  # telegram
       dbeaver
     ]) ++[
-      inputs.nixpkgs-master.packages.microsoft-edge-dev
+      config.nixpkgs-master.microsoft-edge-dev
     ]++ (with config.nur.repos;[
       linyinfeng.icalingua-plus-plus
     ]);
