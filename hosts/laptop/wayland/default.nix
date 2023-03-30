@@ -23,16 +23,11 @@
     packages = (with pkgs; [
       # qq # qq official client
       # aichat  # chat gpt
-      (microsoft-edge-dev.overrideAttrs (oldAttrs: {
-        name="microsoft-edge-dev";
-        src = fetchurl {
-          url = "https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-dev/microsoft-edge_113.0.1741.1-1_amd64.deb";
-          sha256 = "sha256:0ajnql273frb7sps1m2g4ih82lnxcx07b5h8b8m3k29801npdpym";
-        };
-      }))
       tdesktop  # telegram
       dbeaver
-    ]) ++ (with config.nur.repos;[
+    ]) ++[
+      inputs.nixpkgs-master.microsoft-edge-dev
+    ]++ (with config.nur.repos;[
       linyinfeng.icalingua-plus-plus
     ]);
   };
