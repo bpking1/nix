@@ -20,16 +20,23 @@
     # shell = pkgs.fish;
     isNormalUser = true;
     extraGroups = [ "wheel" "docker" "libvirtd" "video" "audio" ];
-    packages = (with pkgs; [
+    packages = let
+      nixpkgs-master = import inputs.nixpkgs-master {
+      system = pkgs.system;
+      config.allowUnfree = true;
+      };
+    in 
+      (with pkgs; [
       # qq # qq official client
       # aichat  # chat gpt
       tdesktop  # telegram
       dbeaver
     ]) ++[
-      inputs.nixpkgs-master.microsoft-edge
-    ]++ (with config.nur.repos;[
+      nixpkgs-master.microsoft-edge-dev
+    ]++(with config.nur.repos;[
       linyinfeng.icalingua-plus-plus
     ]);
+        
   };
   boot = {
     supportedFilesystems = [ "ntfs" ];
