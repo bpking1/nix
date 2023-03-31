@@ -34,6 +34,7 @@
       dbeaver
     ]) ++[
       nixpkgs-master.microsoft-edge-dev
+      nixpkgs-master.microsoft-edge
     ]++(with config.nur.repos;[
       linyinfeng.icalingua-plus-plus
     ]);
