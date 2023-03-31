@@ -18,11 +18,6 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   security.rtkit.enable = true;
-  services = {
-    openssh = {
-      enable = true;
-    };
-  };
   environment = {
     binsh = "${pkgs.dash}/bin/dash";
     shells = with pkgs; [ fish ];
@@ -31,20 +26,16 @@
       neovim
       wget
       neofetch
-      exa
-      ranger
-      killall
-      socat
     ];
   };
   services.dbus.enable = true;
 
   nix = {
     settings = {
-      # substituters = [
-      #   "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
-      #   "https://cache.nixos.org/"
-      # ];
+      substituters = [
+        "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
+        "https://cache.nixos.org/"
+      ];
       auto-optimise-store = true; # Optimise syslinks
     };
     gc = {
