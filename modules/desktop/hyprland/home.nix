@@ -22,9 +22,7 @@
       $mainMod = ALT
       # $scripts=$HOME/.config/hypr/scripts
 
-      monitor=,preferred,auto,1 
-      # monitor=HDMI-A-1, 1920x1080, 0x0, 1
-      # monitor=eDP-1, 1920x1080, 1920x0, 1
+      monitor=,preferred,auto,1
 
       # Source a file (multi-file configs)
       # source = ~/.config/hypr/myColors.conf
@@ -316,7 +314,8 @@
       #-----------------------#
       # wall(by swww service) #
       #-----------------------#
-      exec-once = swww-daemon && default_wall 
+      # exec-once = dynamic_wallpaper
+      # exec-once = default_wall 
 
       #------------#
       # auto start #

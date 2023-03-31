@@ -3,10 +3,8 @@
 {
   nixpkgs.system = "x86_64-linux";
 
-  nixpkgs.config.allowUnfree = true;
-
   networking = {
-    hostName = "pc-nixos"; # Define your hostname.
+    hostName = "nixos"; # Define your hostname.
     networkmanager.enable = true;
     hosts = {
       "185.199.109.133" = [ "raw.githubusercontent.com" ];
@@ -29,44 +27,24 @@
     binsh = "${pkgs.dash}/bin/dash";
     shells = with pkgs; [ fish ];
     systemPackages = with pkgs; [
-      pkgs.vscode.fhs
       git
       neovim
       wget
       neofetch
       exa
-      gcc
-      clang
-      cargo
-      zig
-      p7zip
-      atool
-      unzip
-      ranger # terminal file manager
-      ffmpeg
-      ffmpegthumbnailer
-      glib
-      xdg-utils
-      pciutils
-      gdb
+      ranger
       killall
-      #nodejs
       socat
-      zip
-      rar
-      #frp
-      sops
     ];
   };
   services.dbus.enable = true;
-  # services.flatpak.enable = true;
 
   nix = {
     settings = {
-      #  substituters = [
-      #    "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
-      #    "https://cache.nixos.org/"
-      #  ];
+      # substituters = [
+      #   "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
+      #   "https://cache.nixos.org/"
+      # ];
       auto-optimise-store = true; # Optimise syslinks
     };
     gc = {
@@ -82,6 +60,7 @@
       keep-derivations      = true
     '';
   };
+  nixpkgs.config.allowUnfree = true;
 
   system = {
     autoUpgrade = {

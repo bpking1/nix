@@ -2,9 +2,8 @@ let
   common = import ../common;
 in
 [
-  ./imgview  # good, imv ./*.jpg
+  ./imgview
   ./launcher
   ./notice
   ./mpv
-  ./kooha
 ] ++ common

@@ -1,7 +1,7 @@
 [
   ./firefox
   ./gpg
-  ./lazygit  # vscode Jiukeyi ba 
+  ./lazygit
   ./music
   ./neofetch
   ./obs-studio
@@ -9,8 +9,6 @@
   ./resource_monitor
   ./search
   ./yt-dlp
-  ./zathura  # a document viewer, https://github.com/pwmt/zathura
+  ./zathura
   ./kitty
-  # ./youtube-tui # terminal youtube, write in rust
-  # ./aliyun-cli # aliyun server
 ]

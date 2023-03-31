@@ -4,25 +4,24 @@
 , rustPlatform
 , pkg-config
 , libxkbcommon
-, lz4
 ,
 }:
 rustPlatform.buildRustPackage rec {
   pname = "swww";
-  version = "0.7.2";
+  version = "0.7.1";
 
   src = fetchFromGitHub {
     owner = "Horus645";
     repo = "${pname}";
     rev = "v${version}";
-    hash = "sha256-1SmCeIlcjOX3yCvpfqQ82uq4h2xlGhX9OCwKb6jGK78=";
+    hash = "sha256-Z90Zwjqcu0hbtJwKPUNV996mtdgX//ZWWm+Dya/JV9A=";
   };
 
-  cargoHash = "sha256-08YM9yTCRJPHdOc1+7F3guYiP3y1WSi3/hzlDRVpitc=";
+  cargoHash = "sha256-7HYSuwVlAv61u346PmsTnUipDc+HDFySMYgeQCAsBLg=";
 
   nativeBuildInputs = [ pkg-config ];
 
-  buildInputs = [ lz4 libxkbcommon ];
+  buildInputs = [ libxkbcommon ];
 
   doCheck = false;
 
