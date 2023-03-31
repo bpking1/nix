@@ -17,15 +17,15 @@ in
   };
   hardware = {
     nvidia = {
-      # open = true;
-      open = false;
-      # package = config.boot.kernelPackages.nvidiaPackages.vulkan_beta;
+      open = true;
+      #open = false;
+      package = config.boot.kernelPackages.nvidiaPackages.vulkan_beta;
       # package = config.boot.kernelPackages.nvidiaPackages.stable;
       # package = config.boot.kernelPackages.nvidiaPackages.beta;
       modesetting.enable = true;
       prime = {
-        offload.enable = true;
-        intelBusId = "PCI:00:02:0";
+        #offload.enable = true;
+        #intelBusId = "PCI:00:02:0";
         nvidiaBusId = "PCI:01:00:0";
       };
 
