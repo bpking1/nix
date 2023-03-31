@@ -29,6 +29,7 @@
       (with pkgs; [
       # qq # qq official client
       # aichat  # chat gpt
+      google-chrome-dev
       tdesktop  # telegram
       dbeaver
     ]) ++[
